@@ -16,6 +16,8 @@ spec:
   template:
     metadata:
       name: '{{path.basename}}-{{name}}'
+      annotations:
+        argocd.argoproj.io/sync-options: Force=true,Replace=true
     spec:
       project: default
       source:
